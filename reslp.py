@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# test: ./randsnd.py | play -t raw -r 22100 -e float -b 32 -
+# test: ./reslp.py | play -t raw -r 22100 -e float -b 32 -
 # source: https://beammyselfintothefuture.wordpress.com/2015/02/16/simple-c-code-for-resonant-lpf-hpf-filters-and-high-low-shelving-eqs/
 
 import sys
