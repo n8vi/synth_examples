@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Resonant lowpass filter based on code from
+# Lowpass filter based on code from
 # https://beammyselfintothefuture.wordpress.com/2015/02/16/simple-c-code-for-resonant-lpf-hpf-filters-and-high-low-shelving-eqs/
 
 # This is a slow script for visually characterizing filters.  It is meant to be slow and simply written, as its purpose
