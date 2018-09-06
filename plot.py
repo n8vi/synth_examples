@@ -13,7 +13,7 @@ class reslp:
 
     def reslp(this,samp):
         distanceToGo = samp - this.lastOutput;
-        this.momentum += distanceToGo * 0.125 # * 0.0001
+        this.momentum += distanceToGo * 0.125
         this.lastOutput += this.momentum + distanceToGo * 0.125
         return this.lastOutput * 0.7
 
@@ -22,15 +22,17 @@ xvals = []
 yvals = []
 
 t = range(0, 44100)
+k = 1
 
 for f in range (0,8820, 50):
-    s = [math.cos(2 * math.pi * (sam/44100.0) * f) for sam in t]
+    s = [k*math.cos(2 * math.pi * (sam/44100.0) * f) for sam in t]
     fr = [r.reslp(sam) for sam in s]
     sq = [sam*sam for sam in fr]
     rms = math.sqrt(sum(sq)/len(sq))
     xvals.append(f)
     yvals.append(rms)
     print("Frequency %f | Amplitude %f"%(f, rms))
+    k = math.sqrt(2)
 
 fig, ax = plt.subplots()
 ax.plot(xvals,yvals)
